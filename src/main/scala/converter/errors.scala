@@ -1,6 +1,6 @@
 package converter
 
-object Errors {
+object errors {
   class MoneyAmountShouldBePositiveException extends Exception
   class UnsupportedCurrencyException extends Exception
   class WrongCurrencyException extends Exception

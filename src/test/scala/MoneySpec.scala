@@ -1,4 +1,4 @@
-import converter.Errors.{MoneyAmountShouldBePositiveException, UnsupportedCurrencyException, WrongCurrencyException}
+import converter.errors.{MoneyAmountShouldBePositiveException, UnsupportedCurrencyException, WrongCurrencyException}
 import converter.Money
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
