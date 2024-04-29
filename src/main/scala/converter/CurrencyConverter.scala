@@ -3,7 +3,11 @@ package converter
 import converter.errors.{UnsupportedCurrencyException, WrongCurrencyException}
 
 class CurrencyConverter(ratesDictionary: Map[String, Map[String, BigDecimal]]) {
-  def exchange(money: Money, toCurrency: String): Money = ???
+  def exchange(money: Money, toCurrency: String): Money = {
+    val rate = ratesDictionary(money.currency)(toCurrency)
+    val convertAmount = money.amount * rate
+    Money(convertAmount, toCurrency)
+  }
 }
 object CurrencyConverter {
   import Currencies.SupportedCurrencies
